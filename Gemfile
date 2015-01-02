@@ -1,25 +1,27 @@
 source 'https://rubygems.org'
-gem 'rails', '4.1.6'
+gem 'rails', '4.2'
 
 group :development, :test do
-	gem 'sqlite3'
+  gem 'sqlite3'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'quiet_assets'
 end
 
 group :production do
-	gem 'pg'
+  gem 'pg'
+  #gem 'rails_12factor' # For Heroku
 end
 
 group :test do
-	gem 'rspec-rails'
-	gem 'capybara'
-	gem 'cucumber-rails', require: false
-	gem 'factory_girl_rails'
-	gem 'database_cleaner'
-	gem 'faker'
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'capybara-webkit'
+  gem 'database_cleaner'
+  gem 'faker'
+  gem 'factory_girl_rails'
+  gem 'shoulda-matchers'
 end
-
-#gem 'will_paginate'
-#gem 'will_paginate-bootstrap'
 
 gem 'sass-rails'
 gem 'uglifier'
